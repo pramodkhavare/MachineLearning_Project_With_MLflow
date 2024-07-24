@@ -33,7 +33,7 @@ list_of_files = [
     "setup.py",
     "config/model.yaml",
     "config/schema.yaml",
-    "config/config.yaml"
+    "config/config.yaml" ,
     "reasearch/trails.ipynb" ,
     'templates/index.html'
 ]
