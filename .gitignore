@@ -165,4 +165,5 @@ cython_debug/
 artifacts/*
 mlopsvenv/
 venv/
-artifacts/
+artifacts/*
+artifacts/*
