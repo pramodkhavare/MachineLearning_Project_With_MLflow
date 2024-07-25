@@ -17,3 +17,8 @@ os.environ[MLFLOW_TRACKING_USERNAME]="pramodkhavare"
 os.environ[MLFLOW_TRACKING_PASSWORD]=
 
 ```
+
+### Amazon service for CICD :- IAM User | Amazon ECR |
+ECR URI :- 721076744386.dkr.ecr.us-east-1.amazonaws.com/mlproject1  #REPO_NAME -mlproject1
+### AWS_ECR_LOGIN_URI  - 721076744386.dkr.ecr.us-east-1.amazonaws.com
+### REPO_NAME -mlproject1
