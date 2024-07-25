@@ -30,6 +30,5 @@ class DataTransformation:
         logging.info(train.shape)
         logging.info(test.shape)
 
-        print(train.shape)
-        print(test.shape)
+       
         

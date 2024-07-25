@@ -3,6 +3,7 @@ from MLProject.components.data_ingestion import DataIngestion
 from MLProject.components.data_validation import DataValiadtion
 from MLProject.components.data_transformation import DataTransformation
 from MLProject.components.model_trainer import ModelTrainer
+from MLProject.components.model_evaluation import ModelEvaluation
 from MLProject.logger import logging
 from MLProject.exception import ClassificationException
 
@@ -58,12 +59,21 @@ class TrainPipeline():
              
         except Exception as e:
             raise ClassificationException (e ,sys) from e
+        
+    def start_model_evaluation(self):
+        try:
+            model_evaluation_config = self.config.get_model_evaluation_config()
+            model_evaluation = ModelEvaluation(config= model_evaluation_config)
+            model_evaluation.log_into_mlflow()
+        except Exception as e:
+            raise ClassificationException (e ,sys) from e
     def run_pipeline(self):
         try:
             data_ingestion_artifacts = self.start_data_ingestion() 
             data_validation_artifacts = self.start_data_Validation()
             data_transformation_artifacts = self.start_data_transformation()
             model_training_artifacts = self.start_model_training()
+            model_evaluation_artifacts = self.start_model_evaluation()
         except Exception as e:
             raise ClassificationException (e ,sys) from e
         

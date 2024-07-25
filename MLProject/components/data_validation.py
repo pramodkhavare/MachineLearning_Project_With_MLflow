@@ -1,6 +1,6 @@
 import os
 from MLProject.logger import logging
-from MLProjectf.entity.config_entity import DataValidationConfig
+from MLProject.entity.config_entity import DataValidationConfig
 import pandas as pd
 
 
